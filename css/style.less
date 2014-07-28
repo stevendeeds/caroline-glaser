@@ -1,0 +1,365 @@
+/* IMPORT RESET */
+@import url("reset.less");
+
+/* IMPORT 12 COLUMN RESPONSIVE GS */
+@import url("responsive.gs.12col.less");
+
+@pink: #ec6060;
+@lightPink: rgb(241, 169, 171);
+@black: rgb(80,80,80);
+
+/*	EXAMPLE STYLES */
+body {
+	font-family: sans-serif;
+	background: rgb(245, 245, 245);
+	font-family: "kepler-std-semicondensed",serif;
+	color: @black;
+	font-weight: 300;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	&.single {
+		background: url("../i/carolinebg.jpg") no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+.navwrap {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	nav {
+		display: none;
+		background: white;
+		width: 100%;
+		position: relative;
+		border-bottom: 2px solid rgb(230,230,230);
+		a {
+			font-size: 24px;
+			color: rgb(80,80,80);
+			background: rgb(245,245,245);
+			display: block;
+			padding: 10px;
+			margin: 10px;
+			text-decoration: none;
+/* 			font-weight: bold; */
+			
+			&:hover {
+				color: white;
+				background: @lightPink;
+			}
+		}
+		
+	}
+	.menutrigger {
+		position: absolute;
+		bottom: -65px;
+		left: 20px;
+		display: block;
+		height: 40px;
+		width: 40px;
+		cursor: pointer;
+	}
+}
+
+header {
+	padding: 40px 0 70px;
+	.logo {
+		width: 100%;
+		max-width: 350px;
+		display: block;
+		margin: 0 auto;
+		height: auto;
+	}
+
+}
+hr {
+	outline: 0;
+	border: 2px solid #ddd;
+	width: 20%;
+	&.large {
+		outline: 0;
+		border: 2px solid @lightPink;
+		margin-bottom: 60px;
+/* 		background: @pink; */
+		//width: 100%;
+	}
+}
+
+
+article {
+	line-height: 20em;
+	text-align: center;
+	background: #666;
+}
+main {
+	//background: white;
+	display: none;
+}
+.coolrow {
+	/*
+height: 300px;
+	overflow: hidden;
+*/
+}
+.carolinemainpic {
+	background: url("../i/carolinesmilewide.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	min-height: 450px;
+
+}
+.whiteSection {
+	background: white;
+	* {text-align: center;}
+	padding: 70px 10px; 
+	position: relative;
+	display: table;
+	height: 450px;
+	.row {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	width: 100%;
+	@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) {
+			padding: 20px;
+		}
+	h1 {
+		font-size: 1.5em;
+		margin-bottom: .5em;
+	}
+	&.right {
+		&:after {
+			right: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(0, 0, 0, 0);
+			border-right-color: white;
+			border-width: 10px;
+			margin-top: -10px;
+		}
+	}
+	&.left {
+		&:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(0, 0, 0, 0);
+			border-left-color: white;
+			border-width: 10px;
+			margin-top: -10px;
+		}
+	}
+}
+.blackSection {
+	background: black;
+	* {text-align: center;}
+/* 	padding: 70px 0;  */
+	position: relative;
+	display: table;
+	height: 450px;
+	.row {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	iframe {
+		display: block;
+	}
+	width: 100%;
+	@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) {
+			padding: 20px;
+		}
+	h1 {
+		font-size: 1.5em;
+		margin-bottom: .5em;
+	}
+}
+aside {
+	line-height: 20em;
+	text-align: center;
+	background: #999;
+}
+
+footer {
+	line-height: 15em;
+	text-align: center;
+	background: #BBB;
+}
+.calendar_dates {
+	margin: 40px 0;
+	.span_2 {
+		background: white;
+		-webkit-box-shadow: 0 5px 0 #ccc;
+		-moz-box-shadow: 0 5px 0 #ccc;
+		box-shadow: 0 5px 0 #ccc;
+		
+		h2 {
+			background: @pink;
+			padding: 20px 0;
+			text-align: center;
+			font-weight: bold;
+			color: white;
+			font-size: 50px;
+			line-height: .75em;
+			span {
+				font-size: 26px;
+				display: block;
+				text-align: center;
+				font-weight: 300;
+				text-transform: lowercase;
+			}
+		}
+		.caldeetz {
+			padding: 40px 30px;
+			
+			color: rgb(80,80,80);
+			strong {
+				font-weight: 500;
+				display: block;
+				line-height: 1;
+				margin-bottom: 10px;
+			}
+			a {
+				display: block;
+				color: @pink;
+			}
+		}
+	}
+	.span_4 {
+		background: white;
+		-webkit-box-shadow: 0 5px 0 #ccc;
+		-moz-box-shadow: 0 5px 0 #ccc;
+		box-shadow: 0 5px 0 #ccc;
+		
+		h2 {
+			background: @pink;
+			padding: 20px 0;
+			text-align: center;
+			font-weight: bold;
+			color: white;
+			font-size: 50px;
+			line-height: .75em;
+			span {
+				font-size: 26px;
+				display: block;
+				text-align: center;
+				font-weight: 300;
+				text-transform: lowercase;
+			}
+		}
+		.caldeetz {
+			padding: 40px 30px;
+			
+			color: rgb(80,80,80);
+			strong {
+				font-weight: 500;
+				display: block;
+				line-height: 1;
+				margin-bottom: 10px;
+			}
+			a {
+				display: block;
+				color: @pink;
+			}
+		}
+	}
+	h1 {
+		font-weight: 100;
+	}
+	
+	img {
+		max-width: 350px; 
+		height: auto; 
+		display: block; 
+		margin: 0 auto;
+	}
+
+}
+.semitransparentbg {
+	background: rgba(255,255,255,0.6);
+	-webkit-box-shadow: 0 5px 0 #ccc;
+	-moz-box-shadow: 0 5px 0 #ccc;
+	box-shadow: 0 5px 0 #ccc;
+	padding: 50px;
+	font-size: 24px;
+	line-height: 1.5;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+}
+
+iframe, embed, object {
+	max-width: 100%;
+}
+video {
+	max-width: 100%;
+	height: auto;
+}
+input {
+	height: 50px;
+}
+textarea {
+	height: 100px;
+}
+select {
+	margin: 20px;
+}
+input, textarea {
+	display: block;
+	width: 100%;
+	
+	padding: 10px;
+	border: none;
+	margin: 15px 0;
+	font-size: 24px;
+	background: rgba(255,255,255,0.8);
+	color: @black;
+	font-family: "kepler-std-semicondensed",serif;
+	font-weight: normal;
+	
+	&:focus {
+		background: white;
+		color: black;
+		outline: none;
+	}
+	&[type="submit"] {
+		background: @pink;
+		color: white;
+		
+	}
+}
+::-webkit-input-placeholder {
+   color: @black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: @black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: @black;  
+}
+
+:-ms-input-placeholder {  
+   color: @black;  
+}
